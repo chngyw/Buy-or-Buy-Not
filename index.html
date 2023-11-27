@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUY OR BUY NOT</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header_main_wrapper">
+        <div class="logo">
+           <a href="index.html"><img src="brand.png" alt="headerlogo"></a> 
+        </div>
+        
+        <div class="header_main_slider">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="History.html">History</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr/>
+    <div class="mobile-menu-trigger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="container">
+        <h1>Buy or Buy Not?</h1>
+        <p class="description">
+            In today's shopping landscape, we often make impulsive purchases without considering if we really need the items, leading to regret and wasted money.
+            We know how it feels like to buy something and regret it later. We have been in your shoes many times.
+            Here at Buy or Buy Not, we have developed a solution to helping people make better purchase decisions.
+            <br/>
+            <br/>
+            These questions encourage a thoughtful and rational approach to purchasing, helping you assess the true value
+            and necessity of the items that you are considering to buy. We hope that this helps you make smarter purchase choices and have a happy wallet on money well spent!
+        </p>
+    </div>
+
+    <div class="question-container">
+
+      <div class="question" id="itemName">
+        <h2><label for="itemName">Name of Item</label></h2>
+        <input type="text" id="itemName" class="input-box" placeholder="Enter the item name">
+     </div>
+
+       <div class="question" id="itemPrice">
+      <h2><label for="itemPrice">Price of Item</label></h2>
+      <input type="text" id="itemPrice" class="input-box" placeholder="Enter the price">
+      </div>
+
+     <br/>
+        <div class="question" id="question1"></div>
+        <h2> Do I really need this?</h2>
+        <h4>Consider: Is this purchase out of necessity or out of want?</h4>
+        <div class="button-container">
+            <label>
+                <input type="radio" name="question1" value="yes" onclick="answerQuestion('yes', 1)"> Yes
+            </label>
+            <label>
+                <input type="radio" name="question1" value="no" onclick="answerQuestion('no', 1)"> No
+            </label>
+        </div>
+
+      <br/>
+
+        <div class="question" id="question2"></div>
+        <h2> Can I afford this within my budget?</h2>
+        <h4>Consider: What is the cost of the purchase relative to your salary? Is it a significant amount?</h4>
+        <div class="button-container">
+            <label>
+                <input type="radio" name="question2" value="yes" onclick="answerQuestion('yes', 2)"> Yes
+            </label>
+            <label>
+                <input type="radio" name="question2" value="no" onclick="answerQuestion('no', 2)"> No
+            </label>
+        </div>
+
+      <br/>
+
+        <div class="question" id="question3"></div>
+        <h2> Is this the right time to buy?</h2>
+        <h4>Consider: Do I have any loans to pay off? Are there any upcoming sales?</h4>
+        <div class="button-container">
+            <label>
+                <input type="radio" name="question3" value="yes" onclick="answerQuestion('yes', 3)"> Yes
+            </label>
+            <label>
+                <input type="radio" name="question3" value="no" onclick="answerQuestion('no', 3)"> No
+            </label>
+        </div>
+
+      <br/>
+
+        <div class="question" id="question4"></div>
+        <h2> Will I use it frequently?</h2>
+        <h4>Consider: The more you use an item, the lower the cost during each usage. #girlmath</h4>
+        <div class="button-container">
+            <label>
+                <input type="radio" name="question4" value="yes" onclick="answerQuestion('yes', 4)"> Yes
+            </label>
+            <label>
+                <input type="radio" name="question4" value="no" onclick="answerQuestion('no', 4)"> No
+            </label>
+        </div>
+
+     <br/>
+
+        <div class="question" id="question5"></div>
+        <h2> Do I have space to keep the item?</h2>
+        <h4>Consider: Where would you put the item for easy retrieval?</h4>
+        <div class="button-container">
+            <label>
+                <input type="radio" name="question5" value="yes" onclick="answerQuestion('yes', 5)"> Yes
+            </label>
+            <label>
+                <input type="radio" name="question5" value="no" onclick="answerQuestion('no', 5)"> No
+            </label>
+        </div>
+
+    <br/>
+        <button class="submit-button" onclick="submitForm()">Submit</button>
+        <div id="results" class="result-box" style="display: none;"></div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
