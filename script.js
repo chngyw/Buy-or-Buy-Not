@@ -26,3 +26,4 @@ function submitForm() {
     // Make the result box visible
     resultsDiv.style.display = 'block';
 }
+
